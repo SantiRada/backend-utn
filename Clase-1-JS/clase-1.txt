@@ -1,0 +1,11 @@
+1. Variables
+    - Creación, Inicialización, Edición, utilización
+    - Manipulación de tipos
+    - Scope
+    - Arrays y sus funciones
+    - Objetos y sus funciones
+2. Estructuras de control
+    - Condicionales + Anidación + Condicional complejo
+    - Bucles (for clásico, for in, for of, while, do while)
+    - Funciones (parámetros, return)
+3. 
