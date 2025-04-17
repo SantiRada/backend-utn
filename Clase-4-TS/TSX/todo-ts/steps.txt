@@ -1,0 +1,15 @@
+- [x] Listar los TODOs
+- [x] Marcar como completados
+- [x] Eliminar TODOs
+- [x] Filtrar por Completados/Pendientes
+- [x] Eliminar TODOs completados
+- [x] Crear TODOs
+- [x] Buscar TODOs
+- [] Editar TODOs
+------------------------------------------
+- [] Crear Columnas
+- [] Editar Columnas
+- [] Eliminar Columnas
+- [] Mover TODOS entre Columnas
+------------------------------------------
+- [] Aplicar backend (base de datos)

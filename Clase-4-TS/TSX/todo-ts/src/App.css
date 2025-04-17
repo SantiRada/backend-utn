@@ -5,9 +5,10 @@ main{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding-inline: 14%;
+    padding-inline: 24%;
 }
 .list{
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,6 +27,37 @@ main{
     gap: 0.5rem;
     align-items: center;
 }
+.space-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-trash{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #302221;
+    color: #f44336;
+    transition: all .2s ease-in;
+
+    &:hover{
+        background-color: color-mix(in srgb, #302221, #000 5%);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+.error{
+    background-color: #302221;
+    color: #f44336;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+/* ---- TODOs ---- */
 .todo:hover .icon-delete { opacity: 1; }
 .toggle{
     width: 26px;
@@ -53,4 +85,74 @@ main{
 .icon-delete{
     transition: all .12s ease-in;
     opacity: 0;
+}
+/* ---- SEARCHBAR ---- */
+.searchbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.searchbar .top{
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: .5rem;
+}
+.searchbar .top .sector-input{
+    position: relative;
+    display: flex;
+}
+.btn-create{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    color: #ccc;
+    font-size: .8;
+    border-radius: 4px;
+    padding: .25rem .5rem;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    transition: all .2s ease-in;
+
+    &:hover{
+        background-color: #ffffff10;
+        cursor: pointer;
+    }
+}
+.searchbar .input{
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+.searchbar .btn-search{
+    background-color: #09f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+.filter-list{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.filter-chip{
+    padding: .25rem .5rem;
+    font-size: .8rem;
+    background-color: #333;
+    color: #ccc;
+    border: none;
+    border-radius: 4px;
+    transition: all .2s ease-in;
+
+    &:hover{
+        background-color: #444;
+        cursor: pointer;
+    }
 }
