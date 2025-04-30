@@ -5,7 +5,6 @@ Matías, dueño de una vinoteca te pidió armar un sistema de control para su st
 (Los diferentes incisos están escritos como los diría un cliente para que además de la propia consulta SQL, puedan 
 practicar su entendimiento del usuario)
 ---
-
 # Paso 1
 - Diseñar la estructura de la base de datos para el sistema de Matías
 # Paso 2
@@ -25,49 +24,3 @@ practicar su entendimiento del usuario)
 ---
 ## Aclaraciones
 - Si en una consulta se espera que el usuario rellene un dato, deberás rellenarlo hardcodeando un ejemplo entre comillas simples ''.
-
-CREATE DATABASE almacen;
-
-CREATE TABLE categories(
-    category_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    category_name VARCHAR(255)
-)
-
-CREATE TABLE products(
-    product_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    product_name VARCHAR(255) NOT NULL,
-    price INTEGER,
-    category_id INTEGER,
-    stock INTEGER
-)
-
-CREATE TABLE sales(
-    sales_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    product_id INTEGER,
-    quantity INTEGER,
-    sale_date DATE,
-    total INTEGER,
-    payment_method VARCHAR
-)
-
-CREATE TABLE payment_method(
-    method_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name_method VARCHAR(50)
-)
----
-1. "Me gustaría poder ver cuales son las 5 categorías con más y con menos ventas."
----
-(
-    SELECT category_name, COUNT(sales.total) AS Total_de_Ventas FROM sales
-    INNER JOIN products ON products.product_id = sales.product_id
-    RIGHT JOIN categories ON categories.category_id = products.category_id
-    GROUP BY categories.category_name
-    ORDER BY Total_de_Ventas DESC LIMIT 5
-)
-UNION ALL
-(
-    SELECT category_name, COUNT(sales.total) AS Total_de_Ventas FROM sales INNER JOIN products ON products.product_id = sales.product_id
-    RIGHT JOIN categories ON categories.category_id = products.category_id
-    GROUP BY categories.category_name
-    ORDER BY Total_de_Ventas ASC LIMIT 5
-)
