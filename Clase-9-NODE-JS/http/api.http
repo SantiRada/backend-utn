@@ -1,0 +1,7 @@
+GET http://localhost:3005/heroes/batman
+###
+POST http://localhost:3005/heroes
+###
+PUT http://localhost:3005/heroes
+###
+DELETE http://localhost:3005/heroes
