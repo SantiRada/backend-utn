@@ -1,0 +1,9 @@
+POST http://localhost:3005/heroes
+Content-Type: application/json
+
+{
+    "name": "Iron-Man",
+    "age": 35,
+    "power": "money",
+    "city": "New York"
+}

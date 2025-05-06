@@ -1,0 +1,16 @@
+### OBTENER HEROES
+GET http://localhost:3005/heroes
+
+### OBTENER HEROE POR ID
+GET http://localhost:3005/heroes/2
+
+### AGREGAR UN HEROE
+POST http://localhost:3005/heroes
+Content-Type: application/json
+
+{
+    "id": 5,
+    "name": "Thor",
+    "age": 45,
+    "company": "Marvel"
+}

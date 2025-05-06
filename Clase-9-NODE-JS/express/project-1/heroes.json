@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Capitan América",
+        "age": 105,
+        "company": "Marvel"
+    },
+    {
+        "id": 2,
+        "name": "Iron-Man",
+        "age": 40,
+        "company": "Marvel"
+    },
+    {
+        "id": 3,
+        "name": "Batman",
+        "age": 40,
+        "company": "DC"
+    },
+    {
+        "id": 4,
+        "name": "Superman",
+        "age": 35,
+        "company": "DC"
+    }
+]

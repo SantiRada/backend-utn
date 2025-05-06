@@ -1,7 +1,6 @@
 const http = require('node:http');
 // const fs = require('node:fs');
 
-
 const DATA = {
     batman: {
         name: 'Batman',
@@ -19,10 +18,10 @@ const server = http.createServer((req, res) => {
     const path = req.url.split('/'); // [0] = '', [1] = 'heroes', [2] = 'batman'
     // GET POST PUT DELETE
 
-    if(req.method === 'GET') { res.end("Hola desde el servidor!"); }
-    else { res.end("No se permite"); }
+    // if(req.method === 'GET') { res.end("Hola desde el servidor!"); }
+    // else { res.end("No se permite"); }
 
-    switch(req.method){
+    switch (req.method) {
         case 'GET':
             if (path[1] === "heroes") {
                 if(DATA[path[2]]){
