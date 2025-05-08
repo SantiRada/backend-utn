@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "nombre": "Spider-Man",
+      "edad": 18,
+      "poderes": ["Sentido arácnido", "Trepar paredes", "Fuerza sobrehumana", "Agilidad mejorada"],
+      "compania": "Marvel"
+    },
+    {
+      "id": 2,
+      "nombre": "Iron Man",
+      "edad": 45,
+      "poderes": ["Armadura tecnológica", "Vuelo", "Rayos repulsores", "Intelecto avanzado"],
+      "compania": "Marvel"
+    },
+    {
+      "id": 3,
+      "nombre": "Thor",
+      "edad": 1500,
+      "poderes": ["Fuerza divina", "Control del trueno", "Vuelo con Mjolnir", "Inmortalidad"],
+      "compania": "Marvel"
+    },
+    {
+      "id": 4,
+      "nombre": "Hulk",
+      "edad": 40,
+      "poderes": ["Fuerza ilimitada", "Regeneración", "Resistencia extrema"],
+      "compania": "Marvel"
+    },
+    {
+      "id": 5,
+      "nombre": "Black Widow",
+      "edad": 35,
+      "poderes": ["Espionaje", "Artes marciales", "Uso de tecnología avanzada"],
+      "compania": "Marvel"
+    },
+    {
+      "id": 6,
+      "nombre": "Batman",
+      "edad": 35,
+      "poderes": ["Intelecto de nivel genio", "Artes marciales", "Gadgets tecnológicos", "Detective experto"],
+      "compania": "DC"
+    },
+    {
+      "id": 7,
+      "nombre": "Superman",
+      "edad": 35,
+      "poderes": ["Vuelo", "Visión láser", "Súper fuerza", "Invulnerabilidad", "Super velocidad"],
+      "compania": "DC"
+    },
+    {
+      "id": 8,
+      "nombre": "Wonder Woman",
+      "edad": 3000,
+      "poderes": ["Fuerza sobrehumana", "Lazo de la verdad", "Vuelo", "Inmortalidad"],
+      "compania": "DC"
+    },
+    {
+      "id": 9,
+      "nombre": "The Flash",
+      "edad": 28,
+      "poderes": ["Super velocidad", "Viajar en el tiempo", "Reflejos sobrehumanos", "Faseo a través de objetos"],
+      "compania": "DC"
+    },
+    {
+      "id": 10,
+      "nombre": "Green Lantern",
+      "edad": 32,
+      "poderes": ["Anillo de poder", "Creación de objetos con energía", "Vuelo", "Campo de fuerza"],
+      "compania": "DC"
+    }
+  ]
+  

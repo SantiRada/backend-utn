@@ -56,5 +56,3 @@ app.use((req,res) => {
 });
 
 app.listen(3005, () => { console.log(`El servidor esta en el puerto http://localhost:3005`); });
-
-module.exports = { app };

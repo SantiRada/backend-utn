@@ -1,0 +1,9 @@
+POST http://localhost:3005/heroes
+Content-Type: application/json
+
+{
+    "nombre": 5,
+    "edad": 0,
+    "poderes": ["a", "b", "c" ],
+    "compania": "Marvel"
+}
