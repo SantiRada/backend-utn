@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { cors } from 'express';
 
 // import { heroes } from 'heroes.json' assert { type: 'json' };
 // import { heroes } from 'heroes.json' with { type: 'json' };
@@ -10,6 +10,7 @@ const heroes = readJSON('./json/heroes.json');
 const app = express();
 
 app.use(express.json()); // Middleware para recibir req.body
+app.use(cors()); // * = Obligatorio
 
 // METODOS: POST, GET, PUT, PATCH, DELETE
 // METODOS SIMPLES: GET POST 
