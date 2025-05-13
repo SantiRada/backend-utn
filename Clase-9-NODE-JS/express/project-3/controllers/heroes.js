@@ -1,20 +1,20 @@
-import Heroes from '../models/heroes.js';
-import { validateHero } from '../schemes/heroes.js';
+import Heroes from '../models/mysql.heroes.js';
+import { validateArrayHero, validateObjectHero } from '../schemes/heroes.js';
 
-export function getHeroes () {
+export async function getHeroes () {
     // VALIDACION DE TIPOS ????
 
-    const response = Heroes.GetHeroes();
+    const response = await Heroes.GetHeroes();
 
     // VALIDACIONES DE TIPOS
 
     return response;
 }
 
-export function getHeroesForID (id) {
+export async function getHeroesForID (id) {
     // VALIDACION DE TIPOS ????
 
-    const data = Heroes.GetHeroesForID(id);
+    const data = await Heroes.GetHeroesForID(id);
     let response;
 
     // VALIDACIONES DE TIPOS
@@ -26,12 +26,46 @@ export function getHeroesForID (id) {
             errors: [ "No se encontró el heroe" ]
         };
     }else{
-        let zodResponse = validateHero(data);
+        let zodResponse = validateArrayHero(data);
 
         response = {
             status: 'ok',
             code: 200,
             data: zodResponse,
+            errors: []
+        };
+    }
+
+    return response;
+}
+
+export async function createHeroe (body) {
+    // VALIDACION INICIAL
+    // const dataBody = validateObjectHero({
+    //     name: body.name,
+    //     age: body.age,
+    //     company: body.company
+    // });
+
+    // return dataBody;
+
+    // ------ ESPACIO DE CORTE ------
+
+    const data = await Heroes.CreateHeroe(body);
+    let response;
+
+    if(data == null){
+        response = {
+            status: 'error',
+            code: 501,
+            data: body,
+            errors: [ "No se pudo crear el heroe" ]
+        };
+    }else{
+        response = {
+            status: 'ok',
+            code: 201,
+            data: body,
             errors: []
         };
     }

@@ -1,0 +1,8 @@
+POST http://localhost:3007/heroes
+Content-Type: application/json
+
+{
+    "name": "Flash",
+    "age": 39,
+    "company": "DC"
+}
