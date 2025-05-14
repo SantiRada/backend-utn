@@ -1,15 +1,25 @@
 import express from 'express';
-import { heroRoute } from './routes/heroes.js';
+import { CreateRouteHeroes } from './routes/heroes.js';
 
-const app = express();
+export const CreateApp = (heroModel) => {
+    const app = express();
 
-// MIDDLEWARE
-app.use(express.json());
+    const heroRoute = CreateRouteHeroes(heroModel);
 
-// ENDPOINT
-app.get('/', (req, res) => { res.send("Hola mundo!"); });
-app.use('/heroes', heroRoute);
+    // MIDDLEWARE
+    app.use(express.json());
+    // app.use(express.cors());
 
-const server = app.listen(3007, () => {
-    console.log(`Server en http://localhost:${server.address().port}`);
-});
+    // ENDPOINT
+    app.get('/', (req, res) => { res.send("Hola mundo!"); });
+    app.use('/heroes', heroRoute);
+
+    app.use((req, res) => {
+        // 404
+    });
+
+    const server = app.listen(3007, () => {
+        console.log(`Server en http://localhost:${server.address().port}`);
+    });
+}
+

@@ -1,17 +1,8 @@
 import { readJSON } from '../utils/readJSON.js';
 
-
 const heroes = readJSON('../json/heroes.json');
 
 export default class Heroes {
-    /*
-    GetHeroes
-    GetHeroForID
-    GetHeroForCompany
-    CreateHero
-    UpdateHero
-    DeleteHero
-    */
 
     static GetHeroes () {
         return heroes;

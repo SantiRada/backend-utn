@@ -11,14 +11,6 @@ const config = {
 const connection = await mysql.createConnection(config);
 
 export default class Heroes {
-    /*
-    GetHeroes
-    GetHeroForID
-    GetHeroForCompany
-    CreateHero
-    UpdateHero
-    DeleteHero
-    */
 
     static async GetHeroes () {
         const [heroes] = await connection.query('SELECT * FROM heroes;');
@@ -38,5 +30,13 @@ export default class Heroes {
         const response = await connection.query('INSERT INTO heroes (name, age, company) VALUES (?, ?, ?);', [body.name, body.age, body.company]);
 
         return response;
+    }
+
+    static async UpdateHero (body) {
+
+    }
+
+    static async DeleteHero (id) {
+        
     }
 }
