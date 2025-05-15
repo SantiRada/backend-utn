@@ -10,7 +10,7 @@ export const CreateRouteHeroes = (heroModel) => {
 
         const response = await heroController.getHeroes(); // 
         
-        res.status(200).send(response);
+        res.status(response.code).json(response);
     });
 
     heroRoute.get('/:id', async (req, res) => {
@@ -25,6 +25,22 @@ export const CreateRouteHeroes = (heroModel) => {
         const body = req.body;
 
         const response = await heroController.createHeroe(body);
+        
+        res.status(response.code).json(response);
+    });
+
+    heroRoute.put('/', async (req, res) => {
+        const body = req.body;
+
+        const response = await heroController.updateHero(body);
+        
+        res.status(response.code).json(response);
+    });
+
+    heroRoute.delete('/:id', async (req, res) => {
+        const { id } = req.params;
+
+        const response = await heroController.deleteHero(id);
         
         res.status(response.code).json(response);
     });

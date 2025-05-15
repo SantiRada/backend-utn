@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "The Amazing Spider-Man",
+    "editorial": "Marvel Comics",
+    "anio_publicacion": 1963,
+    "personajes_principales": ["Spider-Man", "Gwen Stacy", "J. Jonah Jameson"]
+  },
+  {
+    "id": 2,
+    "titulo": "Batman: The Dark Knight Returns",
+    "editorial": "DC Comics",
+    "anio_publicacion": 1986,
+    "personajes_principales": ["Batman", "Superman", "Comisionado Gordon"]
+  },
+  {
+    "id": 3,
+    "titulo": "Watchmen",
+    "editorial": "DC Comics",
+    "anio_publicacion": 1986,
+    "personajes_principales": ["Rorschach", "Doctor Manhattan", "Silk Spectre"]
+  },
+  {
+    "id": 4,
+    "titulo": "X-Men",
+    "editorial": "Marvel Comics",
+    "anio_publicacion": 1963,
+    "personajes_principales": [
+      "Professor X",
+      "Cyclops",
+      "Jean Grey",
+      "Wolverine"
+    ]
+  }
+]

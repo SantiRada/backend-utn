@@ -2,7 +2,33 @@ POST http://localhost:3007/heroes
 Content-Type: application/json
 
 {
-    "name": "Flash",
+    "name": "Green Arrow",
     "age": 39,
     "company": "DC"
+}
+
+### ACTUALIZAR HEROE
+PUT http://localhost:3007/heroes
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Capitan América",
+    "age": 45,
+    "company": "Marvel Comics"
+}
+
+
+### ELIMINAR HEROE
+DELETE http://localhost:3007/heroes/3
+
+### CREAR COMIC
+POST http://localhost:3007/comics
+Content-Type: application/json
+
+{
+    "titulo": "Titulo de ejemplo #2",
+    "editorial": "ejemplo",
+    "anio_publicacion": 2010,
+    "personajes_principales": "Ejemplo, OtroEjemplo"
 }
