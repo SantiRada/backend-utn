@@ -7,7 +7,6 @@ export const CreateRouteHeroes = (heroModel) => {
     const heroController = new HeroController(heroModel);
 
     heroRoute.get('/', async (req, res) => {
-
         const response = await heroController.getHeroes(); // 
         
         res.status(response.code).json(response);
