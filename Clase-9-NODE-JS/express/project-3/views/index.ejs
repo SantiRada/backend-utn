@@ -17,12 +17,12 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ user: 'Santiago', password: '123' })
+                body: JSON.stringify({ user: 'Santiago', password: '123456' })
             });
 
             if (response.ok) {
                 const data = await response.json();
-                console.log('Login successful:', data);
+                window.location.href = `http://localhost:3007/system/`;
             } else {
                 console.error('Login failed');
             }

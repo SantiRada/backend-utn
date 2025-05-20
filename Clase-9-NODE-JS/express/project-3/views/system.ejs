@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>System</h1>
+    <p>Welcome to the system!</p>
+    <button id="logout">Logout</button>
+
+    <script type="module">
+        const logout = document.getElementById('logout');
+
+        logout.addEventListener('click', async () => {
+            const response = await fetch('http://localhost:3007/users/logout', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                window.location.href = `http://localhost:3007/`;
+            } else {
+                console.error('Logout failed');
+            }
+        });
+    </script>
+</body>
+</html>

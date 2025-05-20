@@ -19,26 +19,20 @@ export const CreateRouteUsers = (userModel) => {
     userRoute.get('/login', (req, res) => { res.send('login'); });
 
     userRoute.post('/login', async (req, res) => {
-        res.header('Access-Control-Allow-Origin', '*');
         const { user, password } = req.body;
 
-        // 1. De Tipado
         if(typeof user !== 'string' || typeof password !== 'string') {
             res.status(400).json({ code: 400, message: 'El usuario o la contraseña no son un string' });
             return;
         }
-        // 2. Length: Min / Max
         if(user.length < 5 || user.length > 15) {
             res.status(400).json({ code: 400, message: 'El usuario no tiene la longitud correcta' });
             return;
         }
 
-        // 3. Existente
         const verifyUser = await userController.login(user, password) ?? "El usuario no existe";
 
-        res.render('login.ejs', {
-            username: "Santiago"
-        });
+        res.json({ message: 'Usuario logueado', data: verifyUser });
     });
     
     userRoute.post('/register', async (req, res) => {
