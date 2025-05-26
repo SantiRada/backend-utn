@@ -52,3 +52,14 @@ Content-Type: application/json
     "user": "Ronaldo",
     "password": "123"
 }
+
+###
+
+POST http://localhost:3007/users/send-mail
+Content-Type: application/json
+
+{
+    "email": "betadev.oficial@gmail.com",
+    "subject": "Asunto de ejemplo",
+    "message": "Mensaje de ejemplo"
+}

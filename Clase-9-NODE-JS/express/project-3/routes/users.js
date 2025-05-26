@@ -10,10 +10,22 @@ export const CreateRouteUsers = (userModel) => {
         res.send('users');
     });
 
+    userRoute.get('/user', (req, res) => {
+        res.render('index');
+    });
+
     userRoute.options('/login', (req, res) => {
         res.header('Access-Control-Allow-Origin', '*');
         res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS, DELETE');
         res.send();
+    });
+
+    userRoute.post('/send-mail', async (req, res) => {
+        const { email, subject, message } = req.body;
+
+        const data = await userController.sendMail(email, subject, message);
+
+        res.json({ message: 'Correo enviado', data });
     });
 
     userRoute.get('/login', (req, res) => { res.send('login'); });
