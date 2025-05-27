@@ -1,0 +1,8 @@
+POST http://localhost:3008/heroes
+Content-Type: application/json
+
+{
+    "name": "Superman",
+    "power": "Flight",
+    "universe": "DC"
+}
