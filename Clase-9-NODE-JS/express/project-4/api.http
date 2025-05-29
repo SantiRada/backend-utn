@@ -2,7 +2,37 @@ POST http://localhost:3008/heroes
 Content-Type: application/json
 
 {
-    "name": "Superman",
-    "power": "Flight",
-    "universe": "DC"
+    "name": "IronMan",
+    "power": "money",
+    "universe": "Marvel"
 }
+
+### BUSCAR POR ID
+
+GET http://localhost:3008/heroes/6834ffd2d95043180563405a
+
+### REEMPLAZAR HEROE
+
+PUT http://localhost:3008/heroes/68350037d95043180563405b
+Content-Type: application/json
+
+{
+    "name": "Flecha Verde",
+    "power": "Bow and Arrows",
+    "universe": "DC Comics"
+}
+
+### ACTUALIZAR HEROE
+
+PATCH http://localhost:3008/heroes/68350037d95043180563405b
+Content-Type: application/json
+
+{
+    "name": "Flecha Roja"
+}
+
+### ELIMINAR POR ID
+DELETE http://localhost:3008/heroes/6834ffd2d95043180563405a
+
+### ELIMINAR POR NOMBRE
+DELETE http://localhost:3008/heroes/Superman
