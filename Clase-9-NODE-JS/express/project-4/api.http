@@ -1,13 +1,15 @@
+### CREAR HEROES
+
 POST http://localhost:3008/heroes
 Content-Type: application/json
 
 {
-    "name": "IronMan",
-    "power": "money",
-    "universe": "Marvel"
+    "name": "Flash Reverses",
+    "power": "Speed",
+    "universe": "DC"
 }
 
-### BUSCAR POR ID
+### BUSCAR POR ID   
 
 GET http://localhost:3008/heroes/6834ffd2d95043180563405a
 
@@ -36,3 +38,26 @@ DELETE http://localhost:3008/heroes/6834ffd2d95043180563405a
 
 ### ELIMINAR POR NOMBRE
 DELETE http://localhost:3008/heroes/Superman
+
+###
+
+POST http://localhost:3008/director
+Content-Type: application/json
+
+{
+    "name": "Example",
+    "age": 30
+}
+
+###
+
+POST http://localhost:3008/movies
+Content-Type: application/json
+
+{
+    "title": "example",
+    "year": 2000,
+    "rating": 10,
+    "lang": "es",
+    "director": "683e467f558e553c72b67d99"
+}

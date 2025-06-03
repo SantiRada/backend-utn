@@ -43,6 +43,8 @@ heroRoute.get('/:name', async (req, res) => {
 heroRoute.post('/', async (req, res) => {
     const newHero = await HeroController.createHero(req.body);
 
+    /// REVISIONES DE ERRORES
+
     res.json(newHero);
 });
 

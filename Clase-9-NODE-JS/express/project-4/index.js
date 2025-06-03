@@ -1,5 +1,7 @@
 import express from 'express';
 import { heroRoute } from './routes/HeroRoute.js';
+import { movieRoute } from './routes/MovieRoute.js';
+import { directorRoute } from './routes/DirectorRoute.js';
 
 const app = express();
 
@@ -8,6 +10,8 @@ app.use(express.json());
 app.get('/', (req, res) => { res.send('Hello, World!'); });
 
 app.use('/heroes', heroRoute);
+app.use('/movies', movieRoute);
+app.use('/director', directorRoute);
 
 app.use('/', (req, res) => {
     res.status(404).send('404 Not Found.');

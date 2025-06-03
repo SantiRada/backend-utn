@@ -1,4 +1,5 @@
 import { MongooseConnection } from '../models/mongodb.js';
+import CreateResponse, { CreateError } from '../utils/response.js';
 
 export default class HeroController {
     static async getHeroes () {
@@ -19,10 +20,17 @@ export default class HeroController {
         return hero;
     }
 
-    static async createHero (data) {
-        const hero = await MongooseConnection.createHero(data);
+    static async createHero (body) {
+        let data = [];
+        let error = [];
 
-        return hero;
+        try{
+            data = await MongooseConnection.createHero(body);
+        } catch(err) {
+            error = CreateError(err);
+        }
+
+        return CreateResponse(200, data, error);
     }
 
     static async replaceHero (id, data) {

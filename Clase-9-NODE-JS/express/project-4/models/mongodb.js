@@ -12,17 +12,17 @@ mongoose.connect(connectionMongoDB)
     }).catch(err => {
         console.error('Error connecting to MongoDB:', err);
     })
-
+    
 export class MongooseConnection {
-
     static async getHeroes () {
+
         const hero = await HeroModel.find({});
 
         return hero;
     }
 
     static async getHeroById (id) {
-        const hero = await HeroModel.findById(id);
+        const hero = await HeroModel.findById(id); // ObjectId
 
         return hero;
     }
@@ -34,11 +34,6 @@ export class MongooseConnection {
     }
 
     static async createHero (data) {
-
-        const existingHero = await HeroModel.find({ name: data.name });
-
-        if(existingHero.length > 0) { return "404 NOT FOUND"; }
-
         const hero = new HeroModel({
             name: data.name,
             power: data.power,
