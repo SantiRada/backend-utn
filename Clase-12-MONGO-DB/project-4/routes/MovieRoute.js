@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { Movies } from '../schemes/MovieScheme.js';
+import MovieController from '../controllers/MoviesController.js';
 
 export const movieRoute = Router();
 
@@ -21,4 +22,12 @@ movieRoute.post('/', async (req, res) => {
     const newMovie = await data.save();
 
     res.json(newMovie);
+});
+
+movieRoute.patch('/:id', async (req, res) => {
+    const { id } = req.params;
+    
+    const hero = await MovieController.updateMovie(id, req.body);
+
+    res.json(hero);
 });

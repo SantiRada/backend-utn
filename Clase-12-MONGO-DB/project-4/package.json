@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "dev:mongo": "node --watch ./startpoint/mongodb.js",
+    "dev:mysql": "node --watch ./startpoint/mysql.js"
   },
   "keywords": [],
   "author": "",

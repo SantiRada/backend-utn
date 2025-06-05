@@ -11,7 +11,7 @@ const Hero = new mongoose.Schema({
                 lowercase: true, // FUNCION
                 trim: true       // "    Santiago    " "Santiago"
         },
-        power: String,
+        power: Array,
         universe: {
                 type: String,
                 required: true,
@@ -19,14 +19,14 @@ const Hero = new mongoose.Schema({
                 enum: [ "marvel", "dc", "vougth" ]
         },
 },{
-        timestamps: true,
+        timestamps: true, // createdAt // updatedAt
         versionKey: false
 });
 
 Hero.set('toJSON', {
         transform: (doc, returnedObject) => {
                 returnedObject.id = doc._id,
-                returnedObject.name = (doc.name[0].toLocaleUpperCase() + doc.name.slice(1)),
+                returnedObject.name = capitalize(doc.name),
                 delete returnedObject._id,
                 delete returnedObject.__v,
                 delete returnedObject.createdAt,
@@ -35,3 +35,19 @@ Hero.set('toJSON', {
 });
 
 export const HeroModel = mongoose.model('characters', Hero);
+
+function capitalize (data) {
+        let partes = data.split(' ');
+
+        if(data.length <= 0) { return ''; }
+
+        let finalName = '';
+
+        partes.map(parte => {
+                finalName += parte[0].toLocaleUpperCase() + parte.slice(1).toLocaleLowerCase() + ' ';
+        });
+
+        finalName = finalName.slice(0, -1);
+
+        return finalName;
+}

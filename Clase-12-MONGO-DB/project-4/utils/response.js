@@ -22,8 +22,6 @@ export function CreateError(data) {
 
     let errors = Object.values(data);
 
-    // return errors[0].universe.path;
-
     for (let i = 0; i < errors.length; i++) {
         for(let error in errors[i]){
 
