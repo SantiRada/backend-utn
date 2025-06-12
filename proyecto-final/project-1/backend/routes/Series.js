@@ -12,6 +12,15 @@ export function SeriesRoute (model) {
 
         res.json(result);
     });
+
+    routeForSeries.get('/filter', async (req, res) => {
+        const filters = req.query;
+
+        const data = await seriesController.GetSerieForFilter(filters);
+
+        res.json(data);
+    });
+
     routeForSeries.post('/', async (req, res) => {
         const data = await seriesController.CreateSerie(req.body);
 

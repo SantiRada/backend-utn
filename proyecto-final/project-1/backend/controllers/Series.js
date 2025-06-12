@@ -11,8 +11,8 @@ export class Series {
 
         return result;
     }
-    async GetSerieForFilter (typeFilter, filter) {
-        const result = await this.model.GetSerieForFilter(typeFilter, filter);
+    async GetSerieForFilter (filter) {
+        const result = await this.model.GetSerieForFilter(filter);
 
         return result;
     }
