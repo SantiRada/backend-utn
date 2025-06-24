@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pizza Margarita Rellena",
+    "ingredientes": [
+      "Masa",
+      "Tomate",
+      "Mozzarella",
+      "Albahaca",
+      "Aceite de oliva"
+    ],
+    "instrucciones": "Extender la masa, agregar ingredientes y hornear 25 min a 200°C."
+  },
+  {
+    "id": 2,
+    "nombre": "Pizza Margarita",
+    "ingredientes": [
+      "Masa",
+      "Tomate",
+      "Mozzarella",
+      "Albahaca"
+    ],
+    "instrucciones": "Extender la masa, agregar ingredientes y hornear 20 min a 200°C."
+  }
+]

@@ -47,6 +47,7 @@ export default class Series {
         return result;
 
     }
+    
     static async CreateSerie (data) {
         const newSerie = new SerieModel(data);
 

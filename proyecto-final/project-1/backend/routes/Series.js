@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { Series } from '../controllers/Series.js';
+import mongoose from "mongoose";
 
 export const routeForSeries = Router();
 
@@ -14,7 +15,8 @@ export function SeriesRoute (model) {
     });
 
     routeForSeries.get('/filter', async (req, res) => {
-        const filters = req.query;
+        const filters = req.body;
+        // req.params // variable.split(' ').join('%20');
 
         const data = await seriesController.GetSerieForFilter(filters);
 
@@ -26,5 +28,11 @@ export function SeriesRoute (model) {
 
         res.json(data);
     });
-}
 
+    process.on('SIGINT', async () => {
+        await mongoose.disconnect();
+        // await mysql.closeConnection()
+        console.log('MongoDB connection closed');
+        process.exit(0);
+    });
+}

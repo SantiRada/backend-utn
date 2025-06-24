@@ -1,0 +1,34 @@
+### Obtener todas las recetas
+GET http://localhost:3000/api/recetas
+Content-Type: application/json
+
+###
+
+### Crear una nueva receta
+POST http://localhost:3000/api/recetas
+Content-Type: application/json
+
+{
+  "id": 2,
+  "nombre": "Pizza Margarita",
+  "ingredientes": ["Masa", "Tomate", "Mozzarella", "Albahaca"],
+  "instrucciones": "Extender la masa, agregar ingredientes y hornear 20 min a 200°C."
+}
+
+###
+
+### Actualizar una receta existente
+PUT http://localhost:3000/api/recetas/1
+Content-Type: application/json
+
+{
+  "nombre": "Pizza Margarita Especial",
+  "ingredientes": ["Masa", "Tomate", "Mozzarella", "Albahaca", "Aceite de oliva"],
+  "instrucciones": "Extender la masa, agregar ingredientes y hornear 25 min a 200°C."
+}
+
+###
+
+### Eliminar una receta
+DELETE http://localhost:3000/api/recetas/1
+Content-Type: application/json

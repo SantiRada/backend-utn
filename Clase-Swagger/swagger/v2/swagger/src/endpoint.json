@@ -1,0 +1,30 @@
+[
+    {
+        "endpoint": "http://localhost:3000/api/recetas",
+        "method": "GET",
+        "title": "Obtener Recetas",
+        "desc": "Lorem ipsum dolor sit amet...",
+        "type": "recetas"
+    },
+    {
+        "endpoint": "http://localhost:3000/api/recetas",
+        "method": "POST",
+        "title": "Añadir Recetas",
+        "desc": "Lorem ipsum dolor sit amet...",
+        "type": "recetas"
+    },
+    {
+        "endpoint": "http://localhost:3000/api/recetas",
+        "method": "PUT",
+        "title": "Actualizar Recetas",
+        "desc": "Lorem ipsum dolor sit amet...",
+        "type": "recetas"
+    },
+    {
+        "endpoint": "http://localhost:3000/api/recetas/",
+        "method": "DELETE",
+        "title": "Eliminar Recetas",
+        "desc": "Lorem ipsum dolor sit amet...",
+        "type": "recetas"
+    }
+]
