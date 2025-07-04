@@ -1,11 +1,11 @@
 import mysql from 'mysql2/promise';
 
 const config = {
-    host: 'localhost',
+    host: 'mysql.railway.internal',
     port: '3306',
     user: 'root',
-    password: '',
-    database: 'project-series'
+    password: 'DPzrbWHrYTQcMTaqNbJUeRmXlwsZThiB',
+    database: 'railway'
 };
 
 const connection = await mysql.createConnection(config);

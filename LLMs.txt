@@ -1,0 +1,30 @@
+--------------------------------------------------
+Few Shot
+Rol > Contexto > Limitaciones > Recursos > Tarea > Ejemplos
+--------------------------------------------------
+1. Respondeme solo con código.
+2. Si el código es correcto respondeme con un ✅ y sino con ❌, dame feedback para corregirlo.
+--------------------------------------------------
+Zero Shot: Un prompt sin características extra.
+--------------------------------------------------
+Chain-of-Thoughts: Buscamos que el modelo piense su propia respuesta antes de darla por finalizada.
+--------------------------------------------------
+Self-Consistency: Seleccionar la mejor respuesta en lugar de la primera.
+--------------------------------------------------
+Tree-of-Thoughts: La respuesta sea más completa y específica al resultado esperado.
+--------------------------------------------------
+Plan-and-Execute: Optimizar el funcionamiento paso a paso.
+--------------------------------------------------
+Critic-Refine: Mejorar las prácticas utilizadas al programar
+--------------------------------------------------
+Template-Filling: Simplificar trabajo repetitivo
+--------------------------------------------------
+LLM-to-LLM:
+    1. Simplificar trabajo repetitivo
+    2. Mejorar o actualizar herramientas fuera de mi conocimiento
+    3. Dedicar menos tiempo al armado inicial
+--------------------------------------------------
+Prompt-Chaining:
+    1. Mejorar/iterar en el diseño de mi producto.
+    2. Acortar el espacio de contexto y enfocarse en las soluciones.
+--------------------------------------------------
