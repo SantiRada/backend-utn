@@ -1,0 +1,18 @@
+POST http://localhost:3020/register 
+Content-Type: application/json
+
+{
+    "mail": "Example@gmail.com",
+    "name": "Example",
+    "password": "example123"
+}
+
+###
+
+POST http://localhost:3020/login
+Content-Type: application/json
+
+{
+    "mail": "Example@gmail.com",
+    "password": "example123"
+}
